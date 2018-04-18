@@ -1,3 +1,3 @@
 export interface AppConfig {
-	OS: string;
+	LOGISTICS_TYPE: string;
 }

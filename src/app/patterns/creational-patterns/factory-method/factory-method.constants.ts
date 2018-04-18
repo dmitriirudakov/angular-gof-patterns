@@ -1,4 +1,4 @@
-export const OS_TYPES = {
-	WINDOWS: 'WINDOWS',
-	WEB: 'WEB'
+export const LOGISTICS_TYPES = {
+	TRUCK: 'TRUCK',
+	SHIP: 'SHIP'
 }

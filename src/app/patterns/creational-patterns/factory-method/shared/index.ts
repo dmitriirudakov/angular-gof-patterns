@@ -1,6 +1,5 @@
 export * from './app-config.interface';
-export * from './button.interface';
-export * from './dialog.model';
+export * from './logistics.interface';
 
-export * from './web';
-export * from './windows';
+export * from './truck';
+export * from './ship';

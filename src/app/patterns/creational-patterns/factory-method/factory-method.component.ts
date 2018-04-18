@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppConfig, Dialog, WebDialog, WindowsDialog } from './shared';
-import { OS_TYPES } from './factory-method.constants';
+import { AppConfig, Logistics, TruckLogistics, ShipLogistics } from './shared';
+import { LOGISTICS_TYPES } from './factory-method.constants';
 
 @Component({
 	selector: 'app-factory-method',
@@ -10,21 +10,21 @@ import { OS_TYPES } from './factory-method.constants';
 })
 export class FactoryMethodComponent implements OnInit {
 
-	private dialog: Dialog;
+	public logistics: Logistics;
 
 	ngOnInit() {
 		const config: AppConfig = this.getConfig();
 
-		if (config.OS === OS_TYPES.WINDOWS) {
-			this.dialog = new WindowsDialog();
-		} else if (config.OS === OS_TYPES.WEB) {
-			this.dialog = new WebDialog();
+		if (config.LOGISTICS_TYPE === LOGISTICS_TYPES.TRUCK) {
+			this.logistics = new TruckLogistics();
+		} else if (config.LOGISTICS_TYPE === LOGISTICS_TYPES.SHIP) {
+			this.logistics = new ShipLogistics();
 		}
 	}
 
 	private getConfig(): AppConfig {
 		return {
-			OS: OS_TYPES.WINDOWS
+			LOGISTICS_TYPE: LOGISTICS_TYPES.SHIP
 		}
 	}
 }
