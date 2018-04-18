@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AppConfig, Dialog, WebDialog, WindowsDialog } from './shared';
-import { DIALOG_TYPES } from './factory-method.constants';
+import { OS_TYPES } from './factory-method.constants';
 
 @Component({
 	selector: 'app-factory-method',
@@ -15,16 +15,16 @@ export class FactoryMethodComponent implements OnInit {
 	ngOnInit() {
 		const config: AppConfig = this.getConfig();
 
-		if (config.OS === DIALOG_TYPES.WINDOWS) {
+		if (config.OS === OS_TYPES.WINDOWS) {
 			this.dialog = new WindowsDialog();
-		} else if (config.OS === DIALOG_TYPES.WEB) {
+		} else if (config.OS === OS_TYPES.WEB) {
 			this.dialog = new WebDialog();
 		}
 	}
 
 	private getConfig(): AppConfig {
 		return {
-			OS: DIALOG_TYPES.WINDOWS
+			OS: OS_TYPES.WINDOWS
 		}
 	}
 }
