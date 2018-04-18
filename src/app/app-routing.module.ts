@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FactoryMethodComponent, AbstractFactoryComponent } from './patterns';
+import { AbstractFactoryComponent, BuilderComponent, FactoryMethodComponent } from './patterns';
  
 const routes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: 'full' },
-	{ path: 'factory-method', component: FactoryMethodComponent },
 	{ path: 'patterns', children: [
 		{ path: 'creational', children: [
+			{ path: 'abstract-factory', component: AbstractFactoryComponent },
+			{ path: 'builder', component: BuilderComponent },
 			{ path: 'factory-method', component: FactoryMethodComponent },
-			{ path: 'abstract-factory', component: AbstractFactoryComponent } 
 		]}
 	] }
 ];
