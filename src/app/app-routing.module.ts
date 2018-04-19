@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AbstractFactoryComponent, BuilderComponent, FactoryMethodComponent, PrototypeComponent } from './patterns';
+import { 
+	AbstractFactoryComponent, 
+	BuilderComponent, 
+	FactoryMethodComponent, 
+	PrototypeComponent,
+	SingletonComponent
+} from './patterns';
  
 const routes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: 'full' },
@@ -9,7 +15,8 @@ const routes: Routes = [
 			{ path: 'abstract-factory', component: AbstractFactoryComponent },
 			{ path: 'builder', component: BuilderComponent },
 			{ path: 'factory-method', component: FactoryMethodComponent },
-			{ path: 'prototype', component: PrototypeComponent }
+			{ path: 'prototype', component: PrototypeComponent },
+			{ path: 'singleton', component: SingletonComponent }
 		]}
 	] }
 ];

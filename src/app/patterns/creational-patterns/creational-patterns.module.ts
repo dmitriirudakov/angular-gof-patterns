@@ -4,6 +4,7 @@ import { FactoryMethodModule } from './factory-method/factory-method.module';
 import { AbstractFactoryModule } from './abstract-factory/abstract-factory.module';
 import { BuilderModule } from './builder/builder.module';
 import { PrototypeModule } from './prototype/prototype.module';
+import { SingletonModule } from './singleton/singleton.module';
 
 @NgModule({
 	imports: [
@@ -11,7 +12,8 @@ import { PrototypeModule } from './prototype/prototype.module';
 		AbstractFactoryModule,
 		BuilderModule,
 		FactoryMethodModule,
-		PrototypeModule
+		PrototypeModule,
+		SingletonModule
 	],
 	declarations: []
 })
