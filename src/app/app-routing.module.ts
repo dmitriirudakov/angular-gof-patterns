@@ -5,11 +5,13 @@ import {
 	BuilderComponent, 
 	FactoryMethodComponent, 
 	PrototypeComponent,
-	SingletonComponent
+	SingletonComponent,
+	AdapterComponent
 } from './patterns';
+import { AppComponent } from './app.component';
  
 const routes: Routes = [
-	{ path: '', redirectTo: '/', pathMatch: 'full' },
+	{ path: '', pathMatch: 'full', component: AppComponent },
 	{ path: 'patterns', children: [
 		{ path: 'creational', children: [
 			{ path: 'abstract-factory', component: AbstractFactoryComponent },
@@ -17,8 +19,14 @@ const routes: Routes = [
 			{ path: 'factory-method', component: FactoryMethodComponent },
 			{ path: 'prototype', component: PrototypeComponent },
 			{ path: 'singleton', component: SingletonComponent }
+		]}, 
+		{ path: 'structural', children: [
+			{ path: 'adapter', component: AdapterComponent },
 		]}
-	] }
+	], 
+	},
+
+	{ path: '**', redirectTo: '/' }
 ];
  
 @NgModule({
