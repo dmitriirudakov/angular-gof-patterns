@@ -6,7 +6,8 @@ import {
 	FactoryMethodComponent, 
 	PrototypeComponent,
 	SingletonComponent,
-	AdapterComponent
+	AdapterComponent,
+	BridgeComponent
 } from './patterns';
 import { AppComponent } from './app.component';
  
@@ -22,6 +23,7 @@ const routes: Routes = [
 		]}, 
 		{ path: 'structural', children: [
 			{ path: 'adapter', component: AdapterComponent },
+			{ path: 'bridge', component: BridgeComponent },
 		]}
 	], 
 	},
